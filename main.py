@@ -42,6 +42,9 @@ def clone_repository():
 @app.get('/task/execution')
 def task_execute(task_id:str):
     clone_repository()
+    logging.info(f'Finding script script and param of task {task_id}..........')
+    logging.info(f'Execute script of {task_id}....')
+    logging.info('Done')
     return {'task_id':task_id}
 
 if __name__=='__main__':
