@@ -20,7 +20,7 @@ script_repo_url = "https://oauth2:{}@gitlab.com/automate-solutions-tasks/heppai.
 
 def clone_repository():
     if not os.path.exists(script_repo_dir):
-        logging.info("Cloning param repository...")
+        logging.info("Cloning script repository...")
         repo = git.Repo.clone_from(script_repo_url, script_repo_dir)
     else:
         logging.info("Repository already exists. Skipping clone.")
